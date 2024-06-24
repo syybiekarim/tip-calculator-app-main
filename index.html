@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>
+      <span class="splitter-line">SPLI</span>
+      <span class="splitter-line">TTER</span>
+    </h1>
+    <main>
+      <form action="">
+        <div class="grid_container">
+          <div id="inputContainer">
+            <label for="number">Bill</label>
+            <!-- <img src="images/icon-dollar.svg" alt=""> -->
+            <input
+              type="number"
+              placeholder="0"
+              id="bill-number"
+              class="number-input"
+            />
+          </div>
+          <div id="tipContainer">
+            <div>Select Tip %</div>
+            <button class="tipButton" value="5%">5%</button>
+            <button class="tipButton" value="10%">10%</button>
+            <button class="tipButton" value="15%">15%</button>
+            <button class="tipButton" value="25%">25%</button>
+            <button class="tipButton" value="50%">50%</button>
+            <input
+              type="number"
+              name="number"
+              id="custom-number"
+              placeholder="Custom"
+              class="tipButton"
+            />
+          </div>
+          <div id="count_input_container">
+            <div style="display: flex; justify-content: space-between;">
+              <label for="number" id="count_label">Number of People</label>
+              <span id="zero_error" class="none">Can't be zero</span>
+            </div>
+            <input
+              type="number"
+              name="numberOfPeople"
+              placeholder="0"
+              id="count_input"
+              class="number-input"
+            />
+          </div>
+        </div>
+        <div id="calc_container">
+          <div>
+            <div class="calc_sub_container">
+              <div>
+                Tip Amount
+                <div style="opacity: 0.4">/ person</div>
+              </div>
+              <div id="tip_output" class="calc_output">$0.00</div>
+            </div>
+            <div class="calc_sub_container">
+              <div>
+                Total
+                <div style="opacity: 0.4">/ person</div>
+              </div>
+              <div id="total_output" class="calc_output">$0.00</div>
+            </div>
+          </div>
+
+          <button id="reset">RESET</button>
+        </div>
+      </form>
+    </main>
+    <script defer src="script.js"></script>
+  </body>
+</html>
